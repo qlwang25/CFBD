@@ -1,0 +1,29 @@
+dvt: '/home/wangqianlong/model/WEAN-master/data/lcsts/save/lcsts.share.lower.dvt.pt'
+train: '/home/wangqianlong/model/WEAN-master/data/lcsts/save/lcsts.share.lower.train1.pt'
+log: '/home/wangqianlong/model/WEAN-master/data/lcsts/log/'
+epoch: 50
+batch_size: 300
+param_init: 0.1
+optim: 'adam'
+learning_rate: 0.001
+max_grad_norm: 5
+learning_rate_decay: 0.5
+start_decay_at: 8
+emb_size: 256
+hidden_size: 256
+num_layers: 2
+dropout: 0.2
+max_tgt_len: 20
+eval_interval: 500
+save_interval: 3000
+max_generator_batches: 64
+metric: ['rouge-1', 'rouge-2', 'rouge-L']
+shared_vocab: True
+
+# add
+attention: global 
+bidirectional: True 
+beam: False
+beam_size: 5
+lr_decay: False
+activation: tanh
